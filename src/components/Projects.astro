@@ -1,0 +1,144 @@
+---
+
+import ProjectButton from './ProjectButton.astro';
+import GithubIcon from './icons/GithubIcon.astro';
+import LinkIcon from './icons/LinkIcon.astro';
+import TailwindIcon from './icons/TailwindIcon.astro';
+import ReactIcon from './icons/ReactIcon.astro';
+import MongoDBIcon from './icons/MongoDBIcon.astro'; 
+import ReduxIcon from './icons/ReduxIcon.astro';
+import Auth0Icon from './icons/Auth0Icon.astro';
+import JavaScriptIcon from './icons/JavaScriptIcon.astro';
+import VercelIcon from './icons/VercelIcon.astro';
+import PostgresIcon from './icons/PostgresIcon.astro';
+import TypescriptIcon from './icons/TypescriptIcon.astro';
+
+const TAGS = {
+  REACT: {
+    name: "React.js",
+    class: "bg-[#003159] text-white",
+    icon: ReactIcon,
+  },
+  TAILWIND: {
+    name: "TailwindCSS",
+    class: "bg-[#003159] text-white",
+    icon: TailwindIcon,
+  },
+  MONGODB: {
+    name: "MongoDB",
+    class: "bg-[#003159] text-white",
+    icon: MongoDBIcon,
+  },
+  REDUX: {
+    name: "Redux",
+    class: "bg-[#003159] text-white",
+    icon: ReduxIcon,
+  },
+  AUTH0: {
+    name: "Auth0",
+    class: "bg-[#003159] text-white",
+    icon: Auth0Icon,
+  },
+  JAVASCRIPT: {
+    name: "JavaScript",
+    class: "bg-[#003159] text-white",
+    icon: JavaScriptIcon,
+  },
+  VERCEL: {
+    name: "Vercel",
+    class: "bg-[#003159] text-white",
+    icon: VercelIcon,
+  },
+  POSTGRES: {
+    name: "PostgreSQL",
+    class: "bg-[#003159] text-white",
+    icon: PostgresIcon,
+  },
+  TYPESCRIPT: {
+    name: "TypeScript",
+    class: "bg-[#003159] text-white",
+    icon: TypescriptIcon,
+  },
+}
+
+const PROJECTS = [
+  {
+    title: "WeDevelop - E-commerce Platform",
+    description:
+      "Biblioteca de logos SVG de las marcas más populares. +10k visitas al mes. +2K svgs descargados. Creado desde cero con Next.js, React y Tailwind CSS.",
+    link: "https://wedevelop.vercel.app/",
+    github: "https://github.com/AMGutierrezTrejos/WeDevelop-Ecommerce",
+    image: "./public/WeDevelop.png",
+    tags: [TAGS.REACT, TAGS.TAILWIND, TAGS.MONGODB, TAGS.REDUX, TAGS.AUTH0, TAGS.JAVASCRIPT, TAGS.VERCEL],
+  },
+  {
+    title: "Drivers - Entertainment",
+    description:
+"FrontEnd and BackEnd Development enhance user experience with technologies like ReactJS, JavaScript, and Redux, creating captivating interfaces and elegant visualizations with Recharts. Meticulous structuring with HTML5 and CSS ensures an optimal experience. i18next integration allows multiple language support. On the Backend, Express and Node.js ensure solid performance, while MongoDB and Mongoose ensure data integrity. Auth0 adds layers of security and Mercado Pago API integration makes online payment processing easier.",   
+ link: "",
+    github: "https://github.com/AMGutierrezTrejos/PI_Drivers",
+    image: "./public/pidrivers.png",
+    tags: [TAGS.REACT, TAGS.TAILWIND,  TAGS.REDUX, TAGS.JAVASCRIPT,],
+  },
+  {
+    title: "Drivers - Entertainment",
+    description:
+"I built my portfolio using Astro, Tailwind, and TypeScript as a way to measure my skills, as well as learn new technologies and highlight my career path. Astro allowed me to create a fast and efficient website, while Tailwind streamlined the design process with its utilitarian approach. The use of TypeScript added an additional layer of robustness to the code, improving readability and maintainability. Together, these technologies allowed me to demonstrate my technical capabilities and effectively share my experience with potential employers and collaborators in the industry.",   
+ link: "",
+    github: "https://github.com/AMGutierrezTrejos/PI_Drivers",
+    image: "./public/portfolio.png",
+    tags: [TAGS.REACT, TAGS.TAILWIND, TAGS.TYPESCRIPT],
+  },
+]
+---
+
+<div class="flex flex-col gap-y-16">
+    {
+      PROJECTS.map(({ image, title, description, tags, link, github }) => (
+      <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+    <div class="w-full md:w-1/2">
+      <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+        <img alt="Recién llegado vs 5 años en Nueva Zelanda" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
+      </div>
+    </div>
+  
+    <div class="w-full md:w-1/2 md:max-w-lg">
+      <h3 class="text-2xl font-bold text-white dark:text-gray-100">
+        {title}
+      </h3>
+      <div class="flex flex-wrap mt-2">
+        <ul class="flex flex-row mb-2 gap-x-2">
+            {tags.map((tag) => (
+              <li>
+                <span
+                  class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+                >
+                  <tag.icon class="size-4" />
+                  {tag.name}
+                </span>
+              </li>
+            ))}
+          </ul>
+  
+        <div class="mt-2 text-white dark:text-gray-400">{description}</div>
+        <footer class="flex items-end justify-start mt-4 gap-x-4">
+            {github && (
+              <ProjectButton href={github}>
+                <GithubIcon class="size-6" />
+                Code
+                
+              </ProjectButton>
+            )}
+            {link && (
+              <ProjectButton href={link}>
+                <LinkIcon class="size-4" />
+                Preview
+              </ProjectButton>
+            )}
+          </footer>
+      </div>
+    </div>
+  </article>
+      ))
+    }
+  </div>

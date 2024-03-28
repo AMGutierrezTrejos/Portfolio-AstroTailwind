@@ -1,0 +1,41 @@
+---
+import ExperienceItem from './ExperienceItem.astro';
+const EXPERIENCIE = [
+  {
+    date: "at the moment",
+    title: "Claudia Huertas Psychologist",
+    company: "ipproyectosysoluciones",
+    imgExp: "https://avatars.githubusercontent.com/u/32624310?v=4",
+    description:
+      "This project offers a complete management platform for administrators, including the creation and distribution of help posts, user and appointment management, and an integrated payment portal. Users can easily request appointments, access support resources, and participate in the community by rating posts and leaving comments.",
+    // link: "Aqui va un link si es necesario",
+  },
+  {
+    date: "February 2024 - February 2024",
+    title: "WeDevelop - E-commerce Platform",
+    company: "Soy Henry",
+    imgExp: "https://assets.soyhenry.com/logoOG.png",
+    description:
+      "WeDevelop is an application designed to help clients and businesses establish their online presence effectively. Our personalized approach simplifies the process of purchasing a website through a simple questionnaire and a variety of plans tailored to each user's specific digital needs.",
+    // link: "Aqui va un link si es necesario",
+  },
+  {
+    date: "January 2024 - January 2024",
+    title: "Drivers - Entertainment",
+    company: "Soy Henry",
+    imgExp: "https://assets.soyhenry.com/logoOG.png",
+    description:
+    "Focused on creating engaging and functional interfaces for seamless driver management. We implement controlled forms and dynamic pagination with advanced filtering and sorting features. Additionally, we establish a robust CRUD server for seamless integration between external API queries and operations Database."    // link: "Aqui va un link si es necesario",
+  },
+]
+---
+
+<ol class="relative mt-16">
+    {
+      EXPERIENCIE.map((experiencie) => (
+        <li class="">
+          <ExperienceItem {...experiencie} />
+        </li>
+      ))
+    }
+  </ol>
