@@ -12,6 +12,10 @@ import VercelIcon from './icons/VercelIcon.astro';
 import PostgresIcon from './icons/PostgresIcon.astro';
 import TypescriptIcon from './icons/TypescriptIcon.astro';
 import AstroIcon from './icons/AstroIcon.astro';
+import SequelizeIcon from './icons/SequelizeIcon.astro';
+import NodeIcon from './icons/NodeIcon.astro';
+import CssIcon from './icons/CssIcon.astro';
+import ViteIcon from './icons/ViteIcon.astro';
 
 const TAGS = {
   REACT: {
@@ -64,26 +68,55 @@ const TAGS = {
     class: "bg-[#003159] text-white",
     icon: AstroIcon,
   },
+  SEQUELIZE: {
+    name: "Sequelize",
+    class: "bg-[#003159] text-white",
+    icon: SequelizeIcon,
+  },
+  NODE: {
+    name: "Node.js",
+    class: "bg-[#003159] text-white",
+    icon: NodeIcon,
+  },
+  CSS: {
+    name: "CSS",
+    class: "bg-[#003159] text-white",
+    icon: CssIcon,
+  },
+  VITE: {
+    name: "Vite",
+    class: "bg-[#003159] text-white",
+    icon: ViteIcon,
+  },
 }
 
 const PROJECTS = [
+{
+    title: "Claudia Huertas Psychologist",
+    description:
+"On the Frontend, JavaScript, React, Tailwind CSS, Recharts, and Axios are utilized, with responsive web development and ongoing development for React Native. The Backend employs TypeScript, Node.js, Express.js, Mercado Pago, JSON Web Token, and Nodemailer, with PostgreSQL and Sequelize as the database.",
+  //  link: "https://wedevelop.vercel.app/",
+  //   github: "https://github.com/AMGutierrezTrejos/WeDevelop-Ecommerce",
+    image: "https://i.ibb.co/drjHW5N/Claudia-Huertas-Psicologia.png",
+    tags: [TAGS.JAVASCRIPT, TAGS.REACT, TAGS.TAILWIND, TAGS.REDUX, TAGS.AUTH0, TAGS.NODE, TAGS.POSTGRES, TAGS.SEQUELIZE, TAGS.VERCEL, TAGS.VITE],
+  },
   {
     title: "WeDevelop - E-commerce Platform",
     description:
-      "Biblioteca de logos SVG de las marcas más populares. +10k visitas al mes. +2K svgs descargados. Creado desde cero con Next.js, React y Tailwind CSS.",
+    "FrontEnd and BackEnd Development enhance user experience with technologies like ReactJS, JavaScript, and Redux, creating captivating interfaces and elegant visualizations with Recharts. Meticulous structuring with HTML5 and CSS ensures an optimal experience. i18next integration allows multiple language support. On the Backend, Express and Node.js ensure solid performance, while MongoDB and Mongoose ensure data integrity. Auth0 adds layers of security and Mercado Pago API integration makes online payment processing easier.",   
     link: "https://wedevelop.vercel.app/",
     github: "https://github.com/AMGutierrezTrejos/WeDevelop-Ecommerce",
     image: "https://i.ibb.co/8M9mw2v/We-Develop.png",
-    tags: [TAGS.REACT, TAGS.TAILWIND, TAGS.MONGODB, TAGS.REDUX, TAGS.AUTH0, TAGS.JAVASCRIPT, TAGS.VERCEL],
+    tags: [TAGS.JAVASCRIPT, TAGS.REACT, TAGS.CSS, TAGS.REDUX, TAGS.AUTH0,TAGS.NODE, TAGS.MONGODB, TAGS.VERCEL, TAGS.VITE],
   },
   {
     title: "Drivers - Entertainment",
     description:
-"FrontEnd and BackEnd Development enhance user experience with technologies like ReactJS, JavaScript, and Redux, creating captivating interfaces and elegant visualizations with Recharts. Meticulous structuring with HTML5 and CSS ensures an optimal experience. i18next integration allows multiple language support. On the Backend, Express and Node.js ensure solid performance, while MongoDB and Mongoose ensure data integrity. Auth0 adds layers of security and Mercado Pago API integration makes online payment processing easier.",   
+"In the Frontend, JavaScript, React, Redux, and pure CSS are used, along with Axios. In the Backend, PostgreSQL with Sequelize is employed for the database, and an external API is integrated for data retrieval.",   
  link: "",
     github: "https://github.com/AMGutierrezTrejos/PI_Drivers",
     image: "https://i.ibb.co/jwfhCZ2/pidrivers.png",
-    tags: [TAGS.REACT, TAGS.TAILWIND,  TAGS.REDUX, TAGS.JAVASCRIPT,],
+    tags: [TAGS.REACT, TAGS.CSS,  TAGS.REDUX, TAGS.JAVASCRIPT, TAGS.NODE, TAGS.POSTGRES, TAGS.SEQUELIZE, TAGS.VITE],
   },
   {
     title: "Portfolio - Business",
@@ -92,7 +125,7 @@ const PROJECTS = [
      link: "",
     github: "https://github.com/AMGutierrezTrejos/Portfolio-AstroTailwind",
     image: "https://i.ibb.co/NCJJnWc/portfolio.png",
-    tags: [TAGS.REACT, TAGS.TAILWIND, TAGS.TYPESCRIPT, TAGS.ASTRO],
+    tags: [ TAGS.TYPESCRIPT, TAGS.REACT, TAGS.TAILWIND, TAGS.ASTRO],
   },
 ]
 ---
