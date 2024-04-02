@@ -17,6 +17,9 @@ import SequelizeIcon from './icons/SequelizeIcon.astro';
 import NodeIcon from './icons/NodeIcon.astro';
 import CssIcon from './icons/CssIcon.astro';
 import ViteIcon from './icons/ViteIcon.astro';
+import AndroidIcon from './icons/AndroidIcon.astro';
+import AppleIcon from './icons/AppleIcon.astro';
+import StripeIcon from './icons/StripeIcon.astro';
 
 
 const TAGS = {
@@ -90,9 +93,33 @@ const TAGS = {
     class: "bg-[#003159] text-white",
     icon: ViteIcon,
   },
+  ANDROID: {
+    name: "Android",
+    class: "bg-[#003159] text-white",
+    icon: AndroidIcon,
+  },
+  APPLE: {
+    name: "Apple",
+    class: "bg-[#003159] text-white",
+    icon: AppleIcon,
+  },
+  STRIPE: {
+    name: "Stripe",
+    class: "bg-[#003159] text-white",
+    icon: StripeIcon,
+  },
 }
 
 const PROJECTS = [
+{
+    title: "E-commerce Platform APP (React Native) - In Progress",
+    description:
+    "Frontend development using TypeScript, React Native, Tailwind CSS, Redux, Auth0, Axios, and more. Backend development with TypeScript, Node.js, Express.js, Stripe, JSON Web Token, MongoDB, and more. Currently working on implementing additional features...",
+      //  link: "https://wedevelop.vercel.app/",
+  //   github: "https://github.com/AMGutierrezTrejos/WeDevelop-Ecommerce",
+    image: "https://i.ibb.co/x3hQ4Jk/00cb45c2-2208-4ac3-be39-fc5684d481fb-cover.png",
+    tags: [TAGS.TYPESCRIPT, TAGS.REACT, TAGS.TAILWIND, TAGS.REDUX, TAGS.AUTH0, TAGS.NODE, TAGS.MONGODB, TAGS.STRIPE,TAGS.ANDROID, TAGS.APPLE],
+  },
 {
     title: "Claudia Huertas Psychologist",
     description:
