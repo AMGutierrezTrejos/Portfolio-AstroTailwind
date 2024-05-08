@@ -20,6 +20,8 @@ import ViteIcon from './icons/ViteIcon.astro';
 import AndroidIcon from './icons/AndroidIcon.astro';
 import AppleIcon from './icons/AppleIcon.astro';
 import StripeIcon from './icons/StripeIcon.astro';
+import CloudinaryIcon from './icons/CloudinaryIcon.astro';
+import ChakraIcon from './icons/ChakraIcon.astro';
 
 
 const TAGS = {
@@ -108,9 +110,28 @@ const TAGS = {
     class: "bg-[#003159] text-white",
     icon: StripeIcon,
   },
+  CLOUDINARY: {
+    name: "Cloudinary",
+    class: "bg-[#003159] text-white",
+    icon: CloudinaryIcon,
+  },
+  CHAKRA: {
+    name: "Chakra UI",
+    class: "bg-[#003159] text-white",
+    icon: ChakraIcon,
+  },
 }
 
 const PROJECTS = [
+{
+    title: "Social Network Web",
+    description:
+    "Frontend development using JavaScript, React, socket io-client and Chakra UI. Backend development with JavaScript, Node.js, Express.js, JSON Web Token, MongoDB, and more. Currently working on implementing additional features and deploying to production...",
+      //  link: "https://wedevelop.vercel.app/",
+    github: "https://github.com/AMGutierrezTrejos/Social-Network",
+    image: "https://i.ibb.co/NWL1JXQ/Captura-de-pantalla-2024-05-08-113421.png",
+    tags: [TAGS.JAVASCRIPT, TAGS.REACT, TAGS.CHAKRA, TAGS.MONGODB, TAGS.VITE, TAGS.AUTH0, TAGS.NODE, TAGS.CLOUDINARY],
+  },
 {
     title: "E-commerce Platform APP (React Native) - In Progress",
     description:
