@@ -22,6 +22,11 @@ import AppleIcon from './icons/AppleIcon.astro';
 import StripeIcon from './icons/StripeIcon.astro';
 import CloudinaryIcon from './icons/CloudinaryIcon.astro';
 import ChakraIcon from './icons/ChakraIcon.astro';
+import NextIcon from './icons/NextIcon.astro';
+import FirebaseIcon from './icons/FirebaseIcon.astro';
+import GeminiIcon from './icons/GeminiIcon.astro';
+import ReplicateIcon from './icons/ReplicateIcon.astro';
+import NeonIcon from './icons/NeonIcon.astro';
 
 
 const TAGS = {
@@ -120,9 +125,52 @@ const TAGS = {
     class: "bg-[#003159] text-white",
     icon: ChakraIcon,
   },
+  NEXT: {
+    name: "Next.js",
+    class: "bg-[#003159] text-white",
+    icon: NextIcon,
+  },
+  FIREBASE: {
+    name: "Firebase",
+    class: "bg-[#003159] text-white",
+    icon: FirebaseIcon,
+  },
+  GEMINI: {
+    name: "Gemini",
+    class: "bg-[#003159] text-white",
+    icon: GeminiIcon,
+  },
+  REPLICATE: {
+    name: "Replicate",
+    class: "bg-[#003159] text-white",
+    icon: ReplicateIcon,
+  },
+  NEON: {
+    name: "Neont",
+    class: "bg-[#003159] text-white",
+    icon: NeonIcon,
+  },
 }
 
 const PROJECTS = [
+{
+    title: "Software as a Service Web [practice]",
+    description:
+    "A landing page using next js, react and tailwind mainly.with very useful designs and good practices to improve my skills. [website using YouTube tutorials to practice the styles].",
+      //  link: "https://wedevelop.vercel.app/",
+    github: "https://github.com/AMGutierrezTrejos/Template-Saas",
+    image: "https://i.ibb.co/VgN46wL/SAAS-UI-design.png",
+    tags: [TAGS.NEXT,TAGS.JAVASCRIPT, TAGS.REACT, TAGS.TAILWIND, TAGS.VITE, TAGS.NODE],
+  },
+{
+    title: "AI Book generator for kids",
+    description:
+    "Frontend using clerk for authentication, Gemini for prompt management, toastify for notifications, replicate for generating images, among other technologies. Backend using drizzle to manage the ORM and neonDB, as well as paypal and firebase to save the images.",
+      //  link: "https://wedevelop.vercel.app/",
+    github: "https://github.com/AMGutierrezTrejos/AI-books-generator",
+    image: "https://i.ibb.co/Bw4j2q8/AI-book-genkids.png",
+    tags: [TAGS.NEXT, TAGS.JAVASCRIPT, TAGS.REPLICATE, TAGS.NEON, TAGS.REACT, TAGS.VITE, TAGS.FIREBASE, TAGS.GEMINI, TAGS.NODE,],
+  },
 {
     title: "Social Network Web",
     description:
